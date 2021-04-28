@@ -1,0 +1,72 @@
+<socialsci>
+	<term>
+		<semester>social science</semester>
+		<courses>
+			<class>
+				<courseCode>AFAS 2010</courseCode>
+				<title>Intro. to Africana Studies</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ANTH 2300</courseCode>
+				<title>Intro. to Cultural Anthrop.</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ECON 2010</courseCode>
+				<title>Priniciples of Economics I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ECON 2020</courseCode>
+				<title>Principles of Economics II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>GEOG 1010</courseCode>
+				<title>World Regional Geography I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>GEOG 1020</courseCode>
+				<title>World Regional Geography II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>HPSS 1510</courseCode>
+				<title>Health and Wellness I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>POLI 1010</courseCode>
+				<title>Intro. to Poli. Sci.</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>POLI 2010</courseCode>
+				<title>American National Government</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>PSYC 2010</courseCode>
+				<title>General Psychology</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>SOCI 2010</courseCode>
+				<title>Intro. to Sociology</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>URBS 2010</courseCode>
+				<title>Intro. to Urban Studies</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>WMST 2000</courseCode>
+				<title>Intro. to Women's Studies</title>
+				<grade>C</grade>
+			</class>
+		</courses>
+	</term>
+</socialsci>
