@@ -1,0 +1,263 @@
+<?xml version="1.0" ?>
+<Curriculum>
+	<term>
+		<semester> Freshman Year Fall</semester>
+		<courses>
+			<class>
+				<courseCode>ENGL 1010</courseCode>
+				<title>Freshman English I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>MATH 1910</courseCode>
+				<title>Calculus I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>CHEM 1110</courseCode>
+				<title>General Chemistry</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>CHEM 1111</courseCode>
+				<title>Chemistry Lab</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 1020</courseCode>
+				<title>Freshman Engineering</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>UNIV 1000</courseCode>
+				<title>Freshmam Seminar</title>
+				<grade>C</grade>
+			</class>
+		</courses>
+	</term>
+	<term>
+		<semester>Freshman Year Spring</semester>
+		<courses>
+			<class>
+				<courseCode>ENGL 1020</courseCode>
+				<title>Freshman English II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>MATH 1920</courseCode>
+				<title>Calculus II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>PHYS 2110</courseCode>
+				<title>General Physics I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>COMM 2200</courseCode>
+				<title>Public Speaking</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>No Code</courseCode>
+				<title>Humanities Elective</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>No Code</courseCode>
+				<title>Humanities Elective</title>
+				<grade>C</grade>
+			</class>
+		</courses>
+	</term>			
+	<term>		
+		<semester> Sophomore Year  Fall</semester>
+		<courses>
+			<class>
+				<courseCode>MATH 2110</courseCode>
+				<title>Calculus III</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>PHYS 2120</courseCode>
+				<title>General Physics II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>PHYS 2121</courseCode>
+				<title>General Physics II Lab </title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 2110</courseCode>
+				<title>Statics</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 2230</courseCode>
+				<title>Engineering Programming</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>HIST 2010</courseCode>
+				<title>American History I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>UNIV 1000</courseCode>
+				<title>Freshmen Orientation</title>
+				<grade>C</grade>
+			</class>
+		</courses>
+	</term>
+	<term>
+		<semester> Sophomore Year Spring</semester>
+		<courses>
+			<class>
+				<courseCode>MATH 3120</courseCode>
+				<title>Applied Math</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 2000</courseCode>
+				<title>Circuit I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 2001</courseCode>
+				<title>Circuits I lab</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 2250</courseCode>
+				<title>Transport Phenomena</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 2120</courseCode>
+				<title>Dynamics</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>HIST 2020</courseCode>
+				<title>American History II</title>
+				<grade>C</grade>
+			</class>
+		</courses>
+	</term>
+	<term>
+		<semester> Junior Year Fall</semester>
+		<courses>
+			<class>
+				<courseCode>EECE 2200</courseCode>
+				<title>circuits II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 3100</courseCode>
+				<title>digital logic systems</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 3101</courseCode>
+				<title>digital logic systems lab</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 3250</courseCode>
+				<title>Introduction to Design</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 3300</courseCode>
+				<title>Material Science</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 3600</courseCode>
+				<title>Advanced Programming Lab</title>
+				<grade>C</grade>
+			</class>
+		</courses>
+	</term>
+	<term>
+		<semester> Junior Year Spring</semester>
+		<courses>
+			<class>
+				<courseCode>EECE 3200</courseCode>
+				<title>Linear System</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 3300</courseCode>
+				<title>Electronics</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 3301</courseCode>
+				<title>Electronics lab</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 3400</courseCode>
+				<title>Numerical Analysis</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 3210</courseCode>
+				<title>Electromagnetic Theory</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2110</courseCode>
+				<title>American Literature I</title>
+				<grade>C</grade>
+			</class>
+		</courses>
+	</term>
+	<term>
+		<semester> Senior Year Fall</semester>
+		<courses> 
+			<class>
+				<courseCode>ENGR 4500</courseCode>
+				<title>Capstone I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 3410</courseCode>
+				<title>Energy Conversion</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 4000</courseCode>
+				<title>Control System</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 4001</courseCode>
+				<title>Control Systems Lab </title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>EECE 3500</courseCode>
+				<title>Communication System</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGR 4201</courseCode>
+				<title>EIT</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>No Code</courseCode>
+				<title>Social Science Elective</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>No Code</courseCode>
+				<title>Social Science Elective</title>
+				<grade>C</grade>
+			</class>
+       	</courses>
+	</term>
+</Curriculum>

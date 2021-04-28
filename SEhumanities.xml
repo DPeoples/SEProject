@@ -1,0 +1,92 @@
+<humanities>
+	<term>
+		<semester>Humanities</semester>
+		<courses>
+			<class>
+				<courseCode>AREN 2310</courseCode>
+				<title>Architectural History</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ART 1010</courseCode>
+				<title>Art Appreciation</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2012</courseCode>
+				<title>Literary Genres I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2013</courseCode>
+				<title>Black Arts and Literature I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2022</courseCode>
+				<title>Literary Genres II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2023</courseCode>
+				<title>Black Arts and Literature II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2110</courseCode>
+				<title>American Literature I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2120</courseCode>
+				<title>American Literature II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2210</courseCode>
+				<title>Survey English Literature I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2220</courseCode>
+				<title>Survey English Literature II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2310</courseCode>
+				<title>World Literature I</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>ENGL 2320</courseCode>
+				<title>World Literature II</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>HIST 1000</courseCode>
+				<title>Global Culture in History</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>MUSC 1010</courseCode>
+				<title>Music Appreciation</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>PHIL 1030</courseCode>
+				<title>Introduction to Philosophy</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>RELS 2010</courseCode>
+				<title>Intro. to Religious Studies</title>
+				<grade>C</grade>
+			</class>
+			<class>
+				<courseCode>THTR 1020</courseCode>
+				<title>Appreciation of Drama</title>
+				<grade>C</grade>
+			</class>
+		</courses>
+	</term>	
+</humanities>

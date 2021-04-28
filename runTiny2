@@ -1,0 +1,3 @@
+g++ -c tinyxml2.cpp SEProject2.cc
+g++ -o tinyfile2 tinyxml2.cpp SEProject2.cc
+./tinyfile2 SEtranscript.xml SEcurriculum.xml
