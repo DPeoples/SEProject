@@ -299,7 +299,10 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
     list<TakenClass> newSchedule;
     list<TakenClass> humanitiesList;
     list<TakenClass> humanitiesList2;
+    list<TakenClass> socialsciList;
+    list<TakenClass> socialsciList2;
     list<TakenClass> schedpart;
+    list<TakenClass> schedpart2;
     list<TakenClass> nextSchedule = curriculum;
     TakenClass tmpSchedule(" "," "," ");
     int num=1;
@@ -500,26 +503,214 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
         
          cout<<"You need 2 more humanities courses. Choose 2 from above: "<<endl;
         cin>>newHum>>newHum2;
-        count2=1;
-        for (list<TakenClass>::iterator it = humanities.begin();
-            it != humanities.end(); ++it)  
+        count2=0;
+        for (list<TakenClass>::iterator it = humanitiesList.begin();
+            it != humanitiesList.end(); ++it)  
         {
             count2++;
            
-           if(count2-1 == newHum) 
+           if(count2 == newHum) 
             {
                 TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
                 newSchedule.push_back(tmpS);
                 break;
             }
         } 
-        count2 = 1;
-        for (list<TakenClass>::iterator it = humanities.begin();
-            it != humanities.end(); ++it)  
+        int count3 = 0;
+        for (list<TakenClass>::iterator it = humanitiesList.begin();
+            it != humanitiesList.end(); ++it)  
+        {
+            count3++;
+          
+           if(count3 == newHum2) 
+           {
+                TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
+                newSchedule.push_back(tmpS);
+               break;
+           }
+        } 
+    }
+
+
+    for (list<TakenClass>::iterator it = socialsci.begin();
+         it != socialsci.end(); ++it)
+    {   //traverses transcript and makes an object of classes found
+        for (list<TakenClass>::iterator it2 = transcript.begin();
+             it2 != transcript.end(); ++it2)
+        {
+            string g = it->getGrade();
+            char grade[g.size()+1];
+            string g2 = it2->getGrade();
+            char grade2[g2.size()+1];
+            char* x = strcpy(grade,g.c_str());
+            char* y = strcpy(grade2,g2.c_str());
+
+            if (it->getTitle() == it2->getTitle() || it->getCode() == it2->getCode() && x >= y)
+            {
+                tmpSchedule.courseCode = it2->getCode();
+                tmpSchedule.title = it2->getTitle();
+                tmpSchedule.grade = it2->getGrade();
+                break;
+            }
+        }
+         if(it->getCode() == tmpSchedule.courseCode || it->getTitle() == tmpSchedule.title)
+        {
+           count++;
+            TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
+            socialsciList2.push_back(tmpS);
+        }
+    }
+    if(count >= 3)
+    {
+               for (list<TakenClass>::iterator it = newSchedule.begin();
+                it != newSchedule.end(); ++it)
+                {   //traverses transcript and makes an object of classes found
+                    for (list<TakenClass>::iterator it2 = socialsciList2.begin();
+                     it2 != socialsciList2.end(); ++it2)
+                    {
+                        if(it->getCode() == it2->getCode() || it->getTitle() == it2->getTitle())
+                        {
+                        tmpSchedule.courseCode = it2->getCode();
+                        tmpSchedule.title = it2->getTitle();
+                        tmpSchedule.grade = it2->getGrade();
+                        break;  
+                        }
+                    }
+                    if(it->getCode() == tmpSchedule.courseCode || it->getTitle() == tmpSchedule.title ||
+                        tmpSchedule.title == "Social Science Elective")
+                    {
+                         continue;
+                    }
+                    else{
+                         TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
+                         socialsciList.push_back(tmpS);
+                        //cout<<tmpSchedule.courseCode<<"  "<<it->getCode()<<" "<<endl;
+                    }
+                }
+                newSchedule = socialsciList;
+    }
+
+    if(count == 2)
+    {
+        int count1 = 0;
+        int newHum = 0;
+       
+        for (list<TakenClass>::iterator it = socialsciList2.begin();
+                it != socialsciList2.end(); ++it)
+        {   //traverses transcript and makes an object of classes found
+            for (list<TakenClass>::iterator it2 = newSchedule.begin();
+                it2 != newSchedule.end(); ++it2)
+            {
+                if(it->getCode() == it2->getCode() || it->getTitle() == it2->getTitle())
+                {
+                tmpSchedule.courseCode = it2->getCode();
+                tmpSchedule.title = it2->getTitle();
+                tmpSchedule.grade = it2->getGrade();
+                break;
+                }
+            }
+               if(it->getCode() == tmpSchedule.courseCode || it->getTitle() == tmpSchedule.title)
+                {
+                    continue;
+                }
+                else{
+                    TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
+                    socialsciList.push_back(tmpS);
+                }
+        } 
+        for (list<TakenClass>::iterator it = socialsciList.begin();
+                it != socialsciList.end(); ++it)
+        {
+            cout << count1++ << " " << it->toString() << " " << endl;
+        }
+         cout<<"You need to choose another social science course. Choose from above: "<<endl;
+        cin>>newHum;
+        count = 1;
+        for (list<TakenClass>::iterator it = socialsciList.begin();
+            it != socialsciList.end(); ++it)  
+            {
+                count1++;
+               
+               if(count1 == newHum) 
+                {
+                    TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
+                    newSchedule.push_back(tmpS);
+                    break;
+                }
+            } 
+    }
+    if(count == 1)
+    {
+        int newHum = 0;
+        int newHum2 = 0;
+        int count2 = 1;
+        num = 1;
+        for (list<TakenClass>::iterator it = socialsci.begin();
+                it != socialsci.end(); ++it)
+        {   //traverses transcript and makes an object of classes found
+            for (list<TakenClass>::iterator it2 = newSchedule.begin();
+                it2 != newSchedule.end(); ++it2)
+            {
+               if(it->getCode() == it2->getCode() || it->getTitle() == it2->getTitle())
+                {   
+                cout<<num<<" "<<"courses taken: "<<it2->getCode()<<endl;
+                    tmpSchedule.courseCode = it2->getCode();
+                    tmpSchedule.title = it2->getTitle();
+                    tmpSchedule.grade = it2->getGrade();
+                    break;
+                num++;
+                }  
+            }
+            if(it->getCode() == tmpSchedule.courseCode || it->getTitle() == tmpSchedule.title)
+                {
+                    continue;
+                }
+                else{
+                    TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
+                    socialsciList.push_back(tmpS);
+                }
+        }
+        for (list<TakenClass>::iterator it2 = newSchedule.begin();
+                it2 != newSchedule.end(); ++it2)
+            {
+            if(it2->getCode() == tmpSchedule.courseCode || it2->getTitle()== tmpSchedule.title || 
+                it2->getTitle() == "Social Science Elective")
+                {
+                    continue;
+                }
+                else{
+                    TakenClass tmpS(it2->getCode(), it2->getTitle(), it2->getGrade());
+                   schedpart2.push_back(tmpS);
+                }
+            }newSchedule = schedpart2;   
+        for (list<TakenClass>::iterator it = socialsciList.begin();
+                it != socialsciList.end(); ++it)
+        {
+            cout << count2++ << " " << it->toString() << " " << endl;
+        }
+        
+         cout<<"You need 2 more social science courses. Choose 2 from above: "<<endl;
+        cin>>newHum>>newHum2;
+        count2=0;
+        for (list<TakenClass>::iterator it = socialsciList.begin();
+            it != socialsciList.end(); ++it)  
         {
             count2++;
+           
+           if(count2 == newHum) 
+            {
+                TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
+                newSchedule.push_back(tmpS);
+                break;
+            }
+        } 
+        int count3 = 0;
+        for (list<TakenClass>::iterator it = socialsciList.begin();
+            it != socialsciList.end(); ++it)  
+        {
+            count3++;
           
-           if(count2+1 == newHum2) 
+           if(count3 == newHum2) 
            {
                 TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
                 newSchedule.push_back(tmpS);
@@ -532,7 +723,7 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
     int x = 1;
 
     //prints out the next 7 classes new schedule
-    cout<<"Courses for Next Semester: "<<endl; 
+    cout<<"Courses Left to take: "<<endl; 
     for (list<TakenClass>::iterator it = newSchedule.begin();
          it !=newSchedule.end(); ++it)
     {
@@ -545,6 +736,21 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
         //{
             //continue;
         //}
+    }
+    x = 1;
+    cout<<"Courses for next semester: "<<endl; 
+    for (list<TakenClass>::iterator it = newSchedule.begin();
+         it !=newSchedule.end(); ++it)
+    {
+        if(x<7)    
+        {
+        cout << it->toString() << " " << endl;
+        x++;
+        } 
+        else 
+        {
+            continue;
+        }
     }
 
     // makes xml document with tags for new schedule
@@ -559,8 +765,8 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
         nextSem->SetText("Next Semester");
         nextTerm->InsertFirstChild(nextSem);
         nextTerm->InsertEndChild(nextCourse);
-    for (list<TakenClass>::iterator it = nextSchedule.begin();
-         it != nextSchedule.end(); ++it)
+    for (list<TakenClass>::iterator it = newSchedule.begin();
+         it != newSchedule.end(); ++it)
         {  
         XMLElement *nextClass = scheduleFile.NewElement("class");
         XMLElement *nextCode = scheduleFile.NewElement("courseCode");
