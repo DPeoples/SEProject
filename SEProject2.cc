@@ -501,7 +501,7 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
             cout << count2++ << " " << it->toString() << " " << endl;
         }
         
-         cout<<"You need 2 more humanities courses. Choose 2 from above: "<<endl;
+         cout<<"You need 2 more humanities courses to satisfy 9 hours. Choose 2 from above: "<<endl;
         cin>>newHum>>newHum2;
         count2=0;
         for (list<TakenClass>::iterator it = humanitiesList.begin();
@@ -531,7 +531,6 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
         } 
     }
 
-
     for (list<TakenClass>::iterator it = socialsci.begin();
          it != socialsci.end(); ++it)
     {   //traverses transcript and makes an object of classes found
@@ -556,11 +555,12 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
          if(it->getCode() == tmpSchedule.courseCode || it->getTitle() == tmpSchedule.title)
         {
            count++;
+          cout << count++ << " " << it->toString() << " " << endl;
             TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
             socialsciList2.push_back(tmpS);
         }
     }
-    if(count >= 3)
+    if(count >= 2)
     {
                for (list<TakenClass>::iterator it = newSchedule.begin();
                 it != newSchedule.end(); ++it)
@@ -588,57 +588,10 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
                     }
                 }
                 newSchedule = socialsciList;
+                cout<<"All Social Science Taken.\n";
     }
 
-    if(count == 2)
-    {
-        int count1 = 0;
-        int newHum = 0;
-       
-        for (list<TakenClass>::iterator it = socialsciList2.begin();
-                it != socialsciList2.end(); ++it)
-        {   //traverses transcript and makes an object of classes found
-            for (list<TakenClass>::iterator it2 = newSchedule.begin();
-                it2 != newSchedule.end(); ++it2)
-            {
-                if(it->getCode() == it2->getCode() || it->getTitle() == it2->getTitle())
-                {
-                tmpSchedule.courseCode = it2->getCode();
-                tmpSchedule.title = it2->getTitle();
-                tmpSchedule.grade = it2->getGrade();
-                break;
-                }
-            }
-               if(it->getCode() == tmpSchedule.courseCode || it->getTitle() == tmpSchedule.title)
-                {
-                    continue;
-                }
-                else{
-                    TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
-                    socialsciList.push_back(tmpS);
-                }
-        } 
-        for (list<TakenClass>::iterator it = socialsciList.begin();
-                it != socialsciList.end(); ++it)
-        {
-            cout << count1++ << " " << it->toString() << " " << endl;
-        }
-         cout<<"You need to choose another social science course. Choose from above: "<<endl;
-        cin>>newHum;
-        count = 1;
-        for (list<TakenClass>::iterator it = socialsciList.begin();
-            it != socialsciList.end(); ++it)  
-            {
-                count1++;
-               
-               if(count1 == newHum) 
-                {
-                    TakenClass tmpS(it->getCode(), it->getTitle(), it->getGrade());
-                    newSchedule.push_back(tmpS);
-                    break;
-                }
-            } 
-    }
+
     if(count == 1)
     {
         int newHum = 0;
@@ -689,7 +642,7 @@ list<TakenClass> makeFutureSchedule(list<TakenClass> transcript,list<TakenClass>
             cout << count2++ << " " << it->toString() << " " << endl;
         }
         
-         cout<<"You need 2 more social science courses. Choose 2 from above: "<<endl;
+         cout<<"You need 2 more social science courses to satisfy 6 hours. Choose 2 from above: "<<endl;
         cin>>newHum>>newHum2;
         count2=0;
         for (list<TakenClass>::iterator it = socialsciList.begin();
